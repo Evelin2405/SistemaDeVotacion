@@ -43,6 +43,8 @@ def ver_resultados():
     for opcion, cantidad in conteo_opciones.items():
         porcentaje = (cantidad / total_votos) * 100
         print(f"🗳️ {opcion}: {cantidad} votos ({porcentaje:.2f}%)")
+    ganador = max(conteo_opciones, key=conteo_opciones.get)
+    print(f"\n🏆 Ganador de la votación: {ganador}")
 
 def menu():
     while True:
